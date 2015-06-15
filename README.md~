@@ -1,0 +1,4 @@
+the automation for converting datasets for caffe
+1. put the photos you like(square image e.g. 150x150)
+2. install imagemajick package
+3. execute the scripts/
