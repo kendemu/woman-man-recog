@@ -4,6 +4,7 @@ the dataset and the classifier config for gender image classification in Deep Ne
 scripts/ - scripts for making datasets  
 classifier-config/ - configuration file for caffe which used this dataset    
                      change the prototxt CPU mode if you just have CPU environment 
+deep-learn-gender.sh - A shell to do inference in deep learning based on our classifier using this dataset. You need NVIDIA DIGITS 2.0 to run this shell.  
 
 #how to run  
 1. put the photos you like, rectangle image is also supported  
