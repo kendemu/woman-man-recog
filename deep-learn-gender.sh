@@ -1,0 +1,27 @@
+#!/bin/bash
+
+function usage(){
+cat << _EOT_
+
+Usage:
+
+ $0 image
+
+Description:
+
+ Shell for gender classification using gender classification config.
+ In normal settings, GPU is required. If you have to use CPU mode, change the config in classification-config/ directory.
+ You need NVIDIA DIGITS 2.0 to run this script.
+
+ image : image file in jpg/png format
+
+
+_EOT_
+exit 1
+}
+
+if [ $# -ne 1 ]; then
+    usage
+fi
+
+${HOME}/digits-2.0/digits/examples/classification/example.py $(pwd)/classifier-config/snapshot_iter_510.caffemodel $(pwd)/classifier-config/deploy.prototxt $1 --labels $(pwd)/classifier-config/labels.txt 
